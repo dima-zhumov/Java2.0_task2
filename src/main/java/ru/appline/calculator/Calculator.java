@@ -1,4 +1,4 @@
-package org.example;
+package ru.appline.calculator;
 
 import java.io.IOException;
 import java.util.Scanner;
@@ -13,12 +13,10 @@ import java.util.Scanner;
  * который будет выполнять операции +, -, *, /
  * пока не встретит команду exit
  */
-public class Main {
-    public static void main(String[] args) throws IOException {
-        System.out.println("Hello, my dear friend. What's your name?");
+public class Calculator {
+    public void startCalculator() {
         Scanner scanner = new Scanner(System.in);
-        String name = scanner.nextLine();
-        System.out.println("Hello " + name + "! I'm calculator");
+        System.out.println("I'm calculator!");
         System.out.println("Input first number?");
         //Инициализируем первое дробное число число
         Double numberFirst = scanner.nextDouble();
@@ -55,6 +53,5 @@ public class Main {
             System.out.println("What's your next command? \"+\", \"-\", \"*\", \"/\" or exit");
             operation = scanner.nextLine();
         }
-        System.out.println("Goodbye!");
     }
 }
