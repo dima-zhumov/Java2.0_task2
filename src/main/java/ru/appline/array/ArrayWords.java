@@ -1,6 +1,7 @@
 package ru.appline.array;
 
 
+import org.junit.Assert;
 import java.util.Scanner;
 
 public class ArrayWords {
@@ -12,10 +13,11 @@ public class ArrayWords {
         System.out.println("Введи " + arrayWordsSize + " слов через \",\"");
         String arrayWordsStr = scanner.nextLine();
         String arrayWords[] = arrayWordsStr.split(",");
+        Assert.assertEquals("Введено неверное количество слов", arrayWordsSize, arrayWords.length);
         int maxLength = arrayWords[0].length();
         String maxLengthWord = arrayWords[0];
         for (String word : arrayWords) {
-            word=word.trim();
+            word = word.trim();
             if (word.length() > maxLength) {
                 maxLength = word.length();
                 maxLengthWord = word;
