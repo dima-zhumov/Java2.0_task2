@@ -1,4 +1,4 @@
-package ru.appline.array;
+package ru.appline.part1.array;
 
 
 import org.junit.Assert;

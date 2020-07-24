@@ -1,8 +1,7 @@
-package ru.appline;
+package ru.appline.part1;
 
-
-import ru.appline.array.ArrayWords;
-import ru.appline.calculator.Calculator;
+import ru.appline.part1.array.ArrayWords;
+import ru.appline.part1.calculator.Calculator;
 
 import java.util.Scanner;
 

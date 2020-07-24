@@ -1,6 +1,5 @@
-package ru.appline.calculator;
+package ru.appline.part1.calculator;
 
-import java.io.IOException;
 import java.util.Scanner;
 
 /**
