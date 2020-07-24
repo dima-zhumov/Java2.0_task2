@@ -17,16 +17,27 @@ public class RandomArray {
                 max = i;
             }
         }
-        System.out.println("Максимальный отрицательный элемент: " + minNumber);
-        System.out.println("Минимальный положительный элемент: " + maxNumber);
-        int number = minNumber;
-        arrayNumbers[min] = arrayNumbers[max];
-        arrayNumbers[max] = number;
-        System.out.print("Измененный массив: { ");
-        for (int item : arrayNumbers) {
-            System.out.print(item + "; ");
+
+        if (minNumber != 0)
+            System.out.println("Максимальный отрицательный элемент: " + minNumber);
+        else
+            System.out.println("Максимальный отрицательный элемент отсутствует");
+
+        if (maxNumber != 0)
+            System.out.println("Минимальный положительный элемент: " + maxNumber);
+        else
+            System.out.println("Минимальный положительный элемент отсутствует");
+
+        if (minNumber < 0 && maxNumber > 0) {
+            int number = minNumber;
+            arrayNumbers[min] = arrayNumbers[max];
+            arrayNumbers[max] = number;
+            System.out.print("Измененный массив: { ");
+            for (int item : arrayNumbers) {
+                System.out.print(item + "; ");
+            }
+            System.out.println("}");
         }
-        System.out.println("}");
     }
 
     public int[] createRandomArray(int size) {
