@@ -68,12 +68,8 @@ public class Starter {
                     System.out.printf("Total: %.4f \n", calculator.getCurrentStorage());
                     break;
                 case "/":
-                    try {
-                        calculator.setCurrentStorage(division.division(calculator.getCurrentStorage(), numberSecond));
-                        System.out.printf("Total: %.4f \n", calculator.getCurrentStorage());
-                    } catch (ArithmeticException e) { //учитывая, что у нас double, исключение выполняться не будет
-                        System.out.println("Can't be divisible by 0");//при делении на 0, будет бесконечность
-                    }
+                    calculator.setCurrentStorage(division.division(calculator.getCurrentStorage(), numberSecond));
+                    System.out.printf("Total: %.4f \n", calculator.getCurrentStorage());
                     break;
                 default:
                     System.out.println("Incorrect command");
